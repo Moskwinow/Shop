@@ -11,10 +11,55 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    let requestFactory = RequestFactory()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        //       MARK: - Вход
+        
+//        let auth = requestFactory.makeAuthRequestFactory()
+//        auth.login(userName: "Moskwinow", password: "123456") { (result) in
+//            switch result.result {
+//            case .success(let login):
+//                print(login)
+//            case .failure(let error):
+//                print(error.localizedDescription)
+//            }
+//        }
+        
+        //       MARK: - Выход
+        
+//        let logout = requestFactory.makeLogOutRequestFactory()
+//        logout.logout { (result) in
+//            switch result.result {
+//            case .success(let loggedout):
+//                print(loggedout)
+//            case .failure(let error):
+//                print(error.localizedDescription)
+//            }
+//        }
+        
+        //       MARK: - Обновление профиля
+        
+//        let update = requestFactory.makeUpdatingFactory()
+//        update.updateUser { (result) in
+//            switch result.result {
+//            case .success(let updated):
+//                print(updated)
+//            case .failure(let error):
+//                print(error.localizedDescription)
+//            }
+//        }
+        
+        //       MARK: - Регистрация
+        let register = requestFactory.makeRegisterUserFactory()
+        register.register { (result) in
+            switch result.result {
+            case .success(let registred):
+                print(registred)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
         return true
     }
 
