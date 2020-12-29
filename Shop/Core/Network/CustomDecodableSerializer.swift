@@ -9,6 +9,7 @@
 import Alamofire
 
 class CustomDecodableSerializer<T: Decodable>: DataResponseSerializerProtocol {
+    
     private let errorParser: AbstractErrorParser
     
     init(errorParser: AbstractErrorParser) {
@@ -39,4 +40,5 @@ extension DataRequest {
         return response(queue: queue, responseSerializer: responseSerializer, completionHandler: completionHandler)
     }
 }
+
 

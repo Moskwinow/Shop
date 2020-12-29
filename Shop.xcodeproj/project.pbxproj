@@ -36,6 +36,8 @@
 		D4007A9D258FFF4400B9939D /* RegisterResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4007A9C258FFF4400B9939D /* RegisterResult.swift */; };
 		D4007AA0259000B800B9939D /* RegisterRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4007A9F259000B800B9939D /* RegisterRequestFactory.swift */; };
 		D4007AA22590013800B9939D /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4007AA12590013800B9939D /* Register.swift */; };
+		D49068F1259BA5B80012A604 /* ResponseDecodableTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49068F0259BA5B70012A604 /* ResponseDecodableTest.swift */; };
+		D49068F9259BAF3F0012A604 /* LoginResponseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49068F8259BAF3F0012A604 /* LoginResponseTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +98,8 @@
 		D4007A9C258FFF4400B9939D /* RegisterResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterResult.swift; sourceTree = "<group>"; };
 		D4007A9F259000B800B9939D /* RegisterRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRequestFactory.swift; sourceTree = "<group>"; };
 		D4007AA12590013800B9939D /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
+		D49068F0259BA5B70012A604 /* ResponseDecodableTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseDecodableTest.swift; sourceTree = "<group>"; };
+		D49068F8259BAF3F0012A604 /* LoginResponseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponseTest.swift; sourceTree = "<group>"; };
 		DF18366AB726EE05F68B4228 /* Pods-Shop-ShopUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shop-ShopUITests.release.xcconfig"; path = "Target Support Files/Pods-Shop-ShopUITests/Pods-Shop-ShopUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -175,7 +179,9 @@
 			isa = PBXGroup;
 			children = (
 				D4007A40258C110600B9939D /* ShopTests.swift */,
+				D49068F0259BA5B70012A604 /* ResponseDecodableTest.swift */,
 				D4007A42258C110600B9939D /* Info.plist */,
+				D49068F8259BAF3F0012A604 /* LoginResponseTest.swift */,
 			);
 			path = ShopTests;
 			sourceTree = "<group>";
@@ -633,7 +639,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D49068F1259BA5B80012A604 /* ResponseDecodableTest.swift in Sources */,
 				D4007A41258C110600B9939D /* ShopTests.swift in Sources */,
+				D49068F9259BAF3F0012A604 /* LoginResponseTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

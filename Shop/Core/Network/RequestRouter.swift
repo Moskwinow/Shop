@@ -22,6 +22,7 @@ protocol RequestRouter: URLRequestConvertible {
 }
 
 extension RequestRouter {
+    
     var fullUrl: URL {
         return baseUrl.appendingPathComponent(path)
     }
