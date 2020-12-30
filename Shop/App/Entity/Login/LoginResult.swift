@@ -10,5 +10,6 @@ import Foundation
 
 struct LoginResult: Decodable {
     let result: Int
-    let user: User
+    let user_massage: String?
+    let error_message: String?
 }
