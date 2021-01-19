@@ -12,7 +12,7 @@ class Auth: AbstractRequestFactory {
     let errorParser: AbstractErrorParser
     let sessionManager: Session
     let queue: DispatchQueue
-    let baseURL = URL(string: "https://floating-refuge-56799.herokuapp.com/")!
+    let baseURL = URL(string: "https://floating-refuge-56799.herokuapp.com/")! 
     
     init(errorParser: AbstractErrorParser, sessionManager: Session, queue: DispatchQueue = DispatchQueue.global(qos: .utility)) {
         self.errorParser = errorParser
