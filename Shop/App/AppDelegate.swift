@@ -12,12 +12,14 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     let requestFactory = RequestFactory()
-
+    let user = User(id: 1, username: "Moskwinow", email: "Moskwinow@icloud.com", password: "123456", bio: "Hey im a neew here", gender: "Male", credit_card: "0000-1234-3124-4324")
+    let product = Product(product_name: "Book: how to become a good coder", amount: 200, quantity: 1)
+    let product2 = Product(product_name: "Book: how to become a good coder", amount: 200, quantity: 1)
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        //       MARK: - Вход
+//               MARK: - Вход
         
 //        let auth = requestFactory.makeAuthRequestFactory()
-//        auth.login(userName: "Moskwinow", password: "123456") { (result) in
+//        auth.login(userName: user.username, password: user.password) { (result) in
 //            switch result.result {
 //            case .success(let login):
 //                print(login)
@@ -51,15 +53,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        }
         
         //       MARK: - Регистрация
-        let register = requestFactory.makeRegisterUserFactory()
-        register.register { (result) in
-            switch result.result {
-            case .success(let registred):
-                print(registred)
-            case .failure(let error):
-                print(error.localizedDescription)
-            }
-        }
+//        let register = requestFactory.makeRegisterUserFactory()
+//        register.register(user: user) { (result) in
+//            switch result.result {
+//            case .success(let registred):
+//                print(registred)
+//            case .failure(let error):
+//                print(error.localizedDescription)
+//            }
+//        }
+        
+//        MARK: Добавить продукт в корзину
+//        let addProduct = requestFactory.addProduct()
+//        addProduct.addProduct(product: product) { (result) in
+//            switch result.result {
+//            case .success(let bookInBuscket):
+//                print(bookInBuscket)
+//            case .failure(let error):
+//                print(error.localizedDescription)
+//            }
+//        }
         return true
     }
 

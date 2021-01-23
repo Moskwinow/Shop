@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="Shop" customModuleProvider="target">
+            <connections>
+                <outlet property="emailField" destination="mo3-66-QYC" id="TC7-Wa-u3P"/>
+                <outlet property="passwordField" destination="T6e-dK-H8i" id="LF7-Sy-gpT"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="k85-Nd-LU6">
+                    <rect key="frame" x="10" y="69" width="394" height="76"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mo3-66-QYC">
+                            <rect key="frame" x="0.0" y="0.0" width="394" height="34"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T6e-dK-H8i">
+                            <rect key="frame" x="0.0" y="42" width="394" height="34"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="L9W-Rd-ApN">
+                    <rect key="frame" x="50" y="155" width="314" height="68"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lfi-YK-0PD">
+                            <rect key="frame" x="0.0" y="0.0" width="314" height="30"/>
+                            <state key="normal" title="Login"/>
+                            <connections>
+                                <action selector="loginAction:" destination="-1" eventType="touchUpInside" id="kVi-8m-E1p"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bhT-Lq-avd">
+                            <rect key="frame" x="0.0" y="38" width="314" height="30"/>
+                            <state key="normal" title="Register"/>
+                            <connections>
+                                <action selector="registerAction:" destination="-1" eventType="touchUpInside" id="fAa-9z-RP5"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="L9W-Rd-ApN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="5Sg-N4-uMJ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="k85-Nd-LU6" secondAttribute="trailing" constant="10" id="HNK-QU-fQn"/>
+                <constraint firstItem="k85-Nd-LU6" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="25" id="VP7-jM-hMP"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="L9W-Rd-ApN" secondAttribute="trailing" constant="50" id="ZQY-GL-Gmk"/>
+                <constraint firstItem="k85-Nd-LU6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="m0U-lQ-5T8"/>
+                <constraint firstItem="L9W-Rd-ApN" firstAttribute="top" secondItem="k85-Nd-LU6" secondAttribute="bottom" constant="10" id="p2s-4h-yTm"/>
+            </constraints>
+            <point key="canvasLocation" x="-146.37681159420291" y="63.616071428571423"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

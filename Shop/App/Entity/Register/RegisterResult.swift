@@ -11,10 +11,8 @@ import Foundation
 struct RegisterResult: Decodable {
     
     let result: Int
-    let message: String
+    let user_message: String?
+    let error_message: String?
     
-    enum CodingKeys: String, CodingKey {
-        case message = "userMessage"
-        case result = "result"
-    }
+    
 }
