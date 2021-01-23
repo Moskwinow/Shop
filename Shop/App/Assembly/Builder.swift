@@ -6,4 +6,10 @@
 //  Copyright © 2021 Максим Вечирко. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+protocol AbstractBuilder {
+     func createModule() -> Any
+}
+
+

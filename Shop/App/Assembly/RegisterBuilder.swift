@@ -6,4 +6,16 @@
 //  Copyright © 2021 Максим Вечирко. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class RegisterBuilder: AbstractBuilder {
+    
+    func createModule() -> Any {
+        let view = RegisterViewController(nibName: "RegisterViewController", bundle: nil)
+        view.viewModel = RegisterViewModel(requestFactory: RequestFactory())
+        
+        return view as UIViewController
+    }
+    
+    
+}

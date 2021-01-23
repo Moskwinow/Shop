@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+
+struct Login {
+    var email: String
+    var password: String
+}

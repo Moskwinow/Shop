@@ -64,15 +64,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        }
         
 //        MARK: Добавить продукт в корзину
-        let addProduct = requestFactory.addProduct()
-        addProduct.addProduct(product: product) { (result) in
-            switch result.result {
-            case .success(let bookInBuscket):
-                print(bookInBuscket)
-            case .failure(let error):
-                print(error.localizedDescription)
-            }
-        }
+//        let addProduct = requestFactory.addProduct()
+//        addProduct.addProduct(product: product) { (result) in
+//            switch result.result {
+//            case .success(let bookInBuscket):
+//                print(bookInBuscket)
+//            case .failure(let error):
+//                print(error.localizedDescription)
+//            }
+//        }
         return true
     }
 

@@ -16,7 +16,7 @@ class Register: AbstractRequestFactory {
     
     var queue: DispatchQueue
     
-    let baseUrl = URL(string: "https://floating-refuge-56799.herokuapp.com/")!
+    let baseUrl = URL(string: APIUrls.baseUrl)!
     
     init(errorParser: AbstractErrorParser, sessionManager: Session, queue: DispatchQueue) {
         self.errorParser = errorParser
@@ -47,7 +47,7 @@ extension Register {
         var user: User!
         var method: HTTPMethod = .post
         
-        var path: String = "register"
+        var path: String = APIPaths.register
         
         var parameters: Parameters? {
             let params: Parameters = [

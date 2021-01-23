@@ -9,22 +9,55 @@
 import UIKit
 
 class LoginViewController: UIViewController {
+    
+    @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
+    
+    
+    var viewModel: LoginViewModel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func loginAction(_ sender: UIButton!) {
+        guard let email = emailField.text,
+              email != "",
+              let password = passwordField.text,
+              password != "" else {return}
+        
+        viewModel.login(email: email, password: password) { [weak self] (result) in
+            switch result {
+            case .success(let message):
+                DispatchQueue.main.async {
+                    self?.showAlert(title: "Успех", message: message)
+                }
+            case .failure(let error_massage):
+                DispatchQueue.main.async {
+                    self?.showAlert(title: "Ошибка", message: error_massage)
+                }
+                
+            }
+        }
     }
-    */
-
+    
+    @IBAction func registerAction(_ sender: UIButton!) {
+        self.navigationController?.pushViewController(viewModel.builder.createModule() as! UIViewController, animated: true)
+    }
+    
+    
+    private func showAlert(title: String?, message: String?) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "OK", style: .default) { (_) in
+            
+        }
+        alert.addAction(alertAction)
+        
+        self.present(alert, animated: true, completion: nil)
+        
+        
+    }
+    
 }
