@@ -73,6 +73,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //                print(error.localizedDescription)
 //            }
 //        }
+        
+//        let getProduct = requestFactory.getProducts()
+//        getProduct.getProduct { (result) in
+//            switch result.result {
+//            
+//            case .success(let products):
+//                print(products)
+//            case .failure(let error):
+//               
+//            }
+//        }
         return true
     }
 

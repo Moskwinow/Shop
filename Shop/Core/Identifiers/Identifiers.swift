@@ -15,4 +15,5 @@ enum APIUrls {
 enum APIPaths {
     static let login = "login"
     static let register = "register"
+    static let products = "products"
 }

@@ -18,7 +18,7 @@ class LoginViewModel {
     
     var model: LoginResult?
     var requestFactory: RequestFactory
-    let builder: AbstractBuilder
+    var builder: AbstractBuilder
     typealias Results = Success
     
     init(requestFactory: RequestFactory, builder: AbstractBuilder) {

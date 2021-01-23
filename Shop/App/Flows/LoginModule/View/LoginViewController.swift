@@ -32,11 +32,11 @@ class LoginViewController: UIViewController {
             switch result {
             case .success(let message):
                 DispatchQueue.main.async {
-                    self?.showAlert(title: "Успех", message: message)
+                    self?.showAlert(title: "Успех", message: message, status: 1)
                 }
             case .failure(let error_massage):
                 DispatchQueue.main.async {
-                    self?.showAlert(title: "Ошибка", message: error_massage)
+                    self?.showAlert(title: "Ошибка", message: error_massage, status: 0)
                 }
                 
             }
@@ -48,10 +48,22 @@ class LoginViewController: UIViewController {
     }
     
     
-    private func showAlert(title: String?, message: String?) {
+    private func showAlert(title: String?, message: String?, status: Int) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let alertAction = UIAlertAction(title: "OK", style: .default) { (_) in
-            
+        var alertAction = UIAlertAction()
+        switch status {
+        case 1:
+            alertAction = UIAlertAction(title: "OK", style: .default) { [unowned self] _ in
+                DispatchQueue.main.async {
+                    self.viewModel.builder = ProductBuilder()
+                    self.present(self.viewModel.builder.createModule() as! UIViewController, animated: true, completion: nil)
+                }
+            }
+        case 0:
+            alertAction = UIAlertAction(title: "OK", style: .default) { _ in
+                
+            }
+        default: break
         }
         alert.addAction(alertAction)
         
